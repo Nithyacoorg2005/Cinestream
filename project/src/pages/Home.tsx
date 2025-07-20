@@ -44,13 +44,13 @@ const Home: React.FC = () => {
     movies.map(movie => ({ ...movie, isInMyList: myList.includes(movie.id) }));
 
   return (
-    <div className="min-h-screen bg-black">
-      {/* Hero Banner */}
+    <div  className="min-h-screen bg-black">
+   
       <HeroBanner movies={featuredMovies} onPlay={handlePlay} />
 
-      {/* Content Sections */}
-      <div className="relative -mt-32 z-10 space-y-8">
-        {/* Continue Watching */}
+  
+      <div style={{marginTop:"50px"}} className="relative -mt-32 z-10 space-y-8">
+   
         {continueWatching.length > 0 && (
           <MovieCarousel
             title="Continue Watching"
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
           />
         )}
 
-        {/* Trending Now */}
+       
         <MovieCarousel
           title="Trending Now"
           movies={addMyListStatus(trendingMovies)}

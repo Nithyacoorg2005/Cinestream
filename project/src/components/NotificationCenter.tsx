@@ -61,10 +61,10 @@ const NotificationCenter: React.FC = () => {
         )}
       </button>
 
-      {/* Notification Panel */}
+      
       {isOpen && (
         <div className="fixed top-16 right-4 z-50 w-96 max-h-96 bg-gray-900 rounded-lg border border-gray-700 shadow-2xl overflow-hidden">
-          {/* Header */}
+        
           <div className="p-4 border-b border-gray-700 flex items-center justify-between">
             <h3 className="text-lg font-bold text-white">Notifications</h3>
             <div className="flex items-center space-x-2">
@@ -93,7 +93,7 @@ const NotificationCenter: React.FC = () => {
             </div>
           </div>
 
-          {/* Notifications List */}
+    
           <div className="max-h-80 overflow-y-auto">
             {notifications.length === 0 ? (
               <div className="p-8 text-center text-gray-400">
@@ -167,7 +167,7 @@ const NotificationCenter: React.FC = () => {
         </div>
       )}
 
-      {/* Backdrop */}
+     
       {isOpen && (
         <div
           className="fixed inset-0 z-40"

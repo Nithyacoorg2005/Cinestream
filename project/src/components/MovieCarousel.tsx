@@ -62,7 +62,7 @@ const MovieCarousel: React.FC<MovieCarouselProps> = ({
       <h2 className="text-2xl font-bold text-white mb-4 px-4 lg:px-8">{title}</h2>
       
       <div className="relative group">
-        {/* Left Arrow */}
+       
         {canScrollLeft && (
           <button
             onClick={() => scroll('left')}
@@ -72,7 +72,7 @@ const MovieCarousel: React.FC<MovieCarouselProps> = ({
           </button>
         )}
 
-        {/* Right Arrow */}
+     
         {canScrollRight && (
           <button
             onClick={() => scroll('right')}
@@ -82,7 +82,7 @@ const MovieCarousel: React.FC<MovieCarouselProps> = ({
           </button>
         )}
 
-        {/* Movie Grid */}
+       
         <div
           ref={carouselRef}
           className="flex space-x-4 overflow-x-auto scrollbar-hide px-4 lg:px-8 pb-4"

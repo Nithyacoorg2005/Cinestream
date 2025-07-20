@@ -29,7 +29,7 @@ interface MovieCardProps {
 const MovieCard: React.FC<MovieCardProps> = ({ 
   movie, 
   size = 'medium', 
-  showInfo = true, 
+  //showInfo = true, 
   onAddToList,
   onPlay 
 }) => {
@@ -80,10 +80,9 @@ const MovieCard: React.FC<MovieCardProps> = ({
               onLoad={() => setImageLoaded(true)}
             />
             
-            {/* Gradient Overlay */}
+            
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            {/* Watch Progress */}
             {movie.watchProgress && movie.watchProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-600">
                 <div 
@@ -93,25 +92,24 @@ const MovieCard: React.FC<MovieCardProps> = ({
               </div>
             )}
 
-            {/* Premium Badge */}
             {movie.rating > 8 && (
               <div className="absolute top-2 left-2 bg-yellow-600 text-black px-2 py-1 rounded-full text-xs font-bold">
                 Premium
               </div>
             )}
 
-            {/* Type Badge */}
+          
             <div className="absolute top-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-xs font-medium">
               {movie.type === 'series' ? 'Series' : 'Movie'}
             </div>
           </div>
 
-          {/* Hover Overlay */}
+         
           <div className={`absolute inset-0 bg-black/90 transition-opacity duration-300 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}>
             <div className="absolute inset-0 p-4 flex flex-col justify-between">
-              {/* Top Info */}
+           
               <div>
                 <h3 className="text-white font-bold text-sm mb-1 line-clamp-2">{movie.title}</h3>
                 <div className="flex items-center space-x-2 text-xs text-gray-300 mb-2">
@@ -135,7 +133,6 @@ const MovieCard: React.FC<MovieCardProps> = ({
                 </div>
               </div>
 
-              {/* Action Buttons */}
               <div className="space-y-2">
                 <button
                   onClick={handlePlay}

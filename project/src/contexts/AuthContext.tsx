@@ -31,7 +31,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check for stored user session
+    
     const storedUser = localStorage.getItem('cinestream_user');
     if (storedUser) {
       setUser(JSON.parse(storedUser));
@@ -42,10 +42,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const login = async (email: string, password: string): Promise<boolean> => {
     setLoading(true);
     try {
-      // Simulate API call
+ 
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Mock authentication - in real app, this would be an API call
+      
       if (email && password) {
         const userData: User = {
           id: '1',

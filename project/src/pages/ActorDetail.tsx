@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Star, Calendar, MapPin, Award, Film, Tv } from 'lucide-react';
-import { mockMovies } from '../data/mockData';
+
 
 interface Actor {
   id: string;
