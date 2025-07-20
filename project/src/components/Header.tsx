@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Search, Bell, User, LogOut, Settings, Crown, Menu, X, Trophy, Store, Gamepad2, Radio } from 'lucide-react';
+import { Search, Bell, User, LogOut, Settings, Crown, Menu, X, Trophy, Store, Radio } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useProfile } from '../contexts/ProfileContext';
 import { useTheme } from '../contexts/ThemeContext';
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+         
           <div className="flex items-center space-x-8">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center">
@@ -55,7 +55,6 @@ const Header: React.FC = () => {
               <span className="text-xl font-bold text-white hidden sm:block">CineStream</span>
             </Link>
 
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-6">
               {navigationItems.map((item) => (
                 <Link
@@ -76,7 +75,6 @@ const Header: React.FC = () => {
             </nav>
           </div>
 
-          {/* Search and Actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
             <form onSubmit={handleSearch} className="hidden sm:block">
@@ -92,7 +90,7 @@ const Header: React.FC = () => {
               </div>
             </form>
 
-            {/* Gamification Level */}
+           
             <Link
               to="/gamification"
               className="hidden sm:flex items-center space-x-2 bg-purple-600 px-3 py-1 rounded-full hover:bg-purple-700 transition-colors"
@@ -100,12 +98,11 @@ const Header: React.FC = () => {
               <Trophy className="w-4 h-4" />
               <span className="text-sm font-medium">Lv.{userStats.level}</span>
             </Link>
-            {/* Notifications */}
+          
             <button className="p-2 text-gray-300 hover:text-white transition-colors">
               <Bell className="w-5 h-5" />
             </button>
 
-            {/* Subscription Status */}
             {user?.subscription === 'premium' && (
               <div className="flex items-center space-x-1 bg-yellow-600 px-2 py-1 rounded-full">
                 <Crown className="w-4 h-4" />
@@ -113,7 +110,7 @@ const Header: React.FC = () => {
               </div>
             )}
 
-            {/* Profile Menu */}
+          
             <div className="relative">
               <button
                 onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}
@@ -129,7 +126,7 @@ const Header: React.FC = () => {
 
               {isProfileMenuOpen && (
                 <div className="absolute right-0 mt-2 w-64 bg-gray-900 rounded-md shadow-lg border border-gray-700 py-2">
-                  {/* Profiles */}
+                
                   <div className="px-4 py-2 border-b border-gray-700">
                     <p className="text-xs text-gray-400 mb-2">Switch Profile</p>
                     {profiles.map((profile) => (
@@ -152,7 +149,7 @@ const Header: React.FC = () => {
                     ))}
                   </div>
 
-                  {/* Menu Items */}
+                 
                   <Link
                     to="/profile"
                     onClick={() => setIsProfileMenuOpen(false)}
@@ -237,7 +234,7 @@ const Header: React.FC = () => {
               )}
             </div>
 
-            {/* Mobile Menu Toggle */}
+           
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 text-gray-300 hover:text-white transition-colors"

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Plus, ThumbsUp, Star, Info, Clock } from 'lucide-react';
+import { Play, Plus, Star, Info, Clock } from 'lucide-react';
 
 interface Movie {
   id: string;

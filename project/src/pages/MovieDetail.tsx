@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Play, Plus, ThumbsUp, Share2, Download, Star, Clock, Calendar, Globe, Users } from 'lucide-react';
+import { Play, Plus, ThumbsUp, Share2, Download, Star, Clock, Calendar, Globe } from 'lucide-react';
 import { mockMovies, getMyList, addToMyList, removeFromMyList, addToWatchHistory } from '../data/mockData';
 import { useAuth } from '../contexts/AuthContext';
 

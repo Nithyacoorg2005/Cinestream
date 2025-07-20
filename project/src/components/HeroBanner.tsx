@@ -47,7 +47,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ movies, onPlay }) => {
 
   return (
     <div className="relative h-[70vh] lg:h-[80vh] overflow-hidden">
-      {/* Background Image */}
+    
       <div className="absolute inset-0">
         {!imageLoaded && (
           <div className="absolute inset-0 bg-gray-900 animate-pulse flex items-center justify-center">
@@ -63,16 +63,16 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ movies, onPlay }) => {
           onLoad={() => setImageLoaded(true)}
         />
         
-        {/* Gradient Overlays */}
+        
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       </div>
 
-      {/* Content */}
+   
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
-            {/* Movie Info */}
+            
             <div className="mb-4">
               <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                 {currentMovie.type === 'series' ? 'Series' : 'Movie'}
@@ -106,7 +106,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ movies, onPlay }) => {
               ))}
             </div>
 
-            {/* Action Buttons */}
+         
             <div className="flex items-center space-x-4">
               <button
                 onClick={handlePlay}
@@ -135,7 +135,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ movies, onPlay }) => {
         </div>
       </div>
 
-      {/* Navigation Dots */}
+      
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {movies.map((_, index) => (
           <button
